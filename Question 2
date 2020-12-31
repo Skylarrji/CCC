@@ -1,0 +1,13 @@
+P = int(input())
+N = int(input())
+R = int(input())
+
+day = 0
+Ntotal = N
+
+while Ntotal <= P:
+  N = N * R
+  Ntotal = Ntotal + N
+  day = day + 1
+
+print(day) 
