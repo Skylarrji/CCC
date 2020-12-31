@@ -1,0 +1,22 @@
+lines = int(input())
+N = []
+symbol = []
+resultarray = []
+position = 0
+
+for x in range (lines):
+  code = input().split(" ")
+  N.append(int(code[0]))
+  symbol.append(code[1])
+
+  multiplyfactor = N[position]
+  result = symbol[position]
+
+  for line in range (1, multiplyfactor):
+    result = result + symbol[position]
+
+  resultarray.append(result)
+  position = position + 1
+
+for y in range (len(resultarray)):
+  print(resultarray[y])
