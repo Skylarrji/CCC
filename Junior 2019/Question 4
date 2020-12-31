@@ -1,0 +1,21 @@
+topleft = 1
+topright = 2
+bottomleft = 3
+bottomright = 4
+
+orientation = []
+
+orientation.append(input())
+string = orientation[0]
+
+for i in range(len(string)):
+  if string[i] == "H":
+    topleft, bottomleft = bottomleft, topleft
+    topright, bottomright = bottomright, topright
+
+  else:
+    topleft, topright = topright, topleft
+    bottomleft, bottomright = bottomright, bottomleft
+
+print(topleft, topright)
+print(bottomleft, bottomright)
