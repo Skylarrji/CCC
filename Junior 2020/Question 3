@@ -1,0 +1,27 @@
+dropnumber = int(input())
+
+#x and y arrays
+x = []
+y = []
+
+for i in range (dropnumber):
+  #Input numeric values split with comma
+  datainput = input().split(",")
+  #Adding values to x and y arrays
+  #Adds first index value to x array and second index value to y array
+  x.append(int(datainput[0]))
+  y.append(int(datainput[1]))
+
+#Sorting values in ascending order (small --> big)
+x.sort()
+y.sort()
+
+#Finding the smallest and largest values through taking the first and last value in the array
+xmin = x[0]
+ymin = y[0]
+xmax = x[dropnumber - 1]
+ymax = y[dropnumber - 1]
+
+#Output
+print(str(xmin-1) + "," + str(ymin-1))
+print(str(xmax+1) + "," + str(ymax+1))
