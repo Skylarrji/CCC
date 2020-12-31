@@ -1,0 +1,9 @@
+integer = int(input())
+multiplier = int(input())
+sum = integer
+
+for x in range(multiplier):
+  integer = integer * 10
+  sum = sum + integer
+
+print(sum)
