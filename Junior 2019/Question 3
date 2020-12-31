@@ -1,0 +1,31 @@
+lines = int(input())
+linearray = []
+
+for x in range (lines):
+  linearray.append(input())
+
+for i in range (len(linearray)):
+  string = linearray[i]
+  output = len(string)
+  character = string[0]
+  timescount = 1
+  outputtext = ""
+
+  for j in range(output):
+    if j != output-1:
+      nextCharacter = string[j +1]
+
+      if character == nextCharacter:
+        timescount = timescount + 1
+
+      else:
+        outputtext = outputtext + str(timescount) + " " + character + " "
+        character = nextCharacter
+        timescount = 1
+    
+    else:
+      character = string[j]
+      outputtext = outputtext + str(timescount) + " " + character + " "
+
+
+  print(outputtext)
