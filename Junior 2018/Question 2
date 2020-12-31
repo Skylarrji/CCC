@@ -1,0 +1,12 @@
+parkingspaces = int(input())
+yesterday = input()
+today = input()
+
+spacecount = 0
+
+for x in range(parkingspaces):
+
+  if yesterday[x] == "C" and today[x] == "C":
+    spacecount = spacecount + 1
+
+print(spacecount)
