@@ -1,0 +1,59 @@
+timestamps = []
+
+hour1 = 12
+for minute in range(60):
+  if minute == 0:
+    minute1 = "00"
+  
+  elif minute < 10:
+    minute1 = "0" + str(minute)
+  
+  else:
+    minute1 = minute
+
+  time1 = str(hour1) + str(minute1)
+  timestamps.append(time1)
+
+
+for hour in range(1,12):
+  for minute in range(60):
+    if minute == 0:
+      minute1 = "00"
+    
+    elif minute < 10:
+      minute1 = "0" + str(minute)
+    
+    else:
+      minute1 = minute
+
+    time1 = str(hour) + str(minute1)
+    timestamps.append(time1) 
+
+d = int(input())
+count = 0
+
+if d >= 720:
+  dmultiplier = int(d/720) 
+  d = int(d - dmultiplier*720)
+  count = int(31*dmultiplier)
+
+
+for i in range(1, d+1):
+  timeseg = timestamps[i]
+  timediff1 = []
+
+  for j in range(len(timeseg)-1):
+    time1 = int(timeseg[j])
+    time2 = int(timeseg[j+1])
+
+    timediff = time2 - time1
+    timediff1.append(timediff)
+
+  timediff2 = set(timediff1)
+  timediff1 = list(timediff2)
+    
+
+  if len(timediff1) == 1:
+    count = count + 1
+
+print(count)
